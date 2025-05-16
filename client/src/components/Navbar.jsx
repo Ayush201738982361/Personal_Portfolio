@@ -22,8 +22,8 @@ function Navbar() {
           <TypingAnimation
             style={{
               fontSize: "2rem",
-              color: "#8F87F1",
-              fontFamily: "Baskervville, serif",
+              color: "#F5EEDD",
+              fontFamily: "Retro New Version, sans-serif",
               fontWeight: "400",
               fontStyle: "italic",
               textShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
@@ -34,43 +34,49 @@ function Navbar() {
         </a>
         <ul className="navbar-nav ms-auto d-flex flex-row gap-3 align-items-center">
           <li className="nav-item">
-            <img
-              src={github}
-              alt="git"
-              style={{
-                width: "40px",
-                height: "40px",
-                transition: "transform 0.3s",
-                cursor: "pointer",
-              }}
-              className="hover-scale"
-            />
+            <a href="https://github.com/Ayush201738982361">
+              <img
+                src={github}
+                alt="git"
+                style={{
+                  width: "40px",
+                  height: "40px",
+                  transition: "transform 0.3s",
+                  cursor: "pointer",
+                }}
+                className="hover-scale"
+              />
+            </a>
           </li>
           <li className="nav-item">
-            <img
-              src={linkedin}
-              alt="linkedin"
-              style={{
-                width: "42px",
-                height: "42px",
-                transition: "transform 0.3s",
-                cursor: "pointer",
-              }}
-              className="hover-scale"
-            />
+            <a href="https://www.linkedin.com/in/ayush2o3/">
+              <img
+                src={linkedin}
+                alt="linkedin"
+                style={{
+                  width: "42px",
+                  height: "42px",
+                  transition: "transform 0.3s",
+                  cursor: "pointer",
+                }}
+                className="hover-scale"
+              />
+            </a>
           </li>
           <li className="nav-item">
-            <img
-              src={gmail}
-              alt="gmail"
-              style={{
-                width: "38px",
-                height: "38px",
-                transition: "transform 0.3s",
-                cursor: "pointer",
-              }}
-              className="hover-scale"
-            />
+            <a href="mailto:ayushnair87@gmail.com">
+              <img
+                src={gmail}
+                alt="gmail"
+                style={{
+                  width: "38px",
+                  height: "38px",
+                  transition: "transform 0.3s",
+                  cursor: "pointer",
+                }}
+                className="hover-scale"
+              />
+            </a>
           </li>
 
           <li className="nav-item">
