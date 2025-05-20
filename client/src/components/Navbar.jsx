@@ -4,7 +4,7 @@ import github from "../public/github.png";
 import linkedin from "../public/linkedin.png";
 import gmail from "../public/gmail.png";
 
-function Navbar() {
+function Navbar({ toggleSection }) {
   return (
     <nav
       className="navbar px-4 py-3"
@@ -81,6 +81,7 @@ function Navbar() {
 
           <li className="nav-item">
             <Button
+              onClick={toggleSection}
               style={{
                 height: "40px",
                 borderRadius: "8px",
