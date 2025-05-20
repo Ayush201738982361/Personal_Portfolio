@@ -77,7 +77,7 @@ function EducationTimeline() {
           icon={<IoSchool />}
         >
           <h3 className="vertical-timeline-element-title">
-            Christ University{" "}
+            Christ (Deemed to be University)
           </h3>
           <h4 className="vertical-timeline-element-subtitle">
             Bangalore,Karnataka
