@@ -1,10 +1,11 @@
+import { useState, useRef } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import AboutMe from "./components/AboutMe";
 import EducationTimeline from "./components/EducationTimeline";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Form from "./components/Form";
-import { useState, useRef } from "react";
 import "./App.css";
 
 function App() {
@@ -21,14 +22,26 @@ function App() {
 
   return (
     <>
-      <Navbar toggleSection={toggleSection} />
-      <AboutMe />
-      <EducationTimeline />
-      <Skills />
-      <Projects />
-      <div ref={formRef}>
-        <Form></Form>
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Navbar toggleSection={toggleSection} />
+                <AboutMe />
+                <EducationTimeline />
+                <Skills />
+                <Projects />
+                <div ref={formRef}>
+                  <Form></Form>
+                </div>
+              </>
+            }
+          />
+          <Route path="*" element={<h1>Page Not Found</h1>} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
