@@ -5,34 +5,44 @@ import styles from "../form.module.css";
 import axios from "axios";
 
 function Form() {
-  const showToastMessage = () => {
+  const showSuccessToast = () => {
     toast.success("Thanks! Looking forward to connecting with you.", {
       position: "top-right",
     });
   };
+
+  const showErrorToast = (msg) => {
+    toast.error(msg || "Something went wrong!", {
+      position: "top-right",
+    });
+  };
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [msg, setMsg] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
     try {
-      axios
-        .post(`http://localhost:${import.meta.env.VITE_BACKEND_PORT}/`, {
-          name,
-          email,
-          msg,
-        })
-        .then((res) => {
-          if (res.status === 201) {
-            setName("");
-            setEmail("");
-            setMsg("");
-            showToastMessage();
-          }
-        });
+      const res = await axios.post(
+        `http://localhost:${import.meta.env.VITE_BACKEND_PORT}/`,
+        { name, email, msg }
+      );
+
+      if (res.status === 201) {
+        setName("");
+        setEmail("");
+        setMsg("");
+        showSuccessToast();
+      }
     } catch (err) {
-      console.log("There Was Some Problem:", err);
+      if (err.response?.status === 409) {
+        showErrorToast("This email has already been used.");
+      } else {
+        console.error("There was a problem:", err);
+        showErrorToast("Server error. Please try again later.");
+      }
     }
   };
 
@@ -69,9 +79,7 @@ function Form() {
             className={styles.input}
             name="name"
             type="text"
-            onChange={(e) => {
-              setName(e.target.value);
-            }}
+            onChange={(e) => setName(e.target.value)}
           />
           <input
             value={email}
@@ -79,9 +87,7 @@ function Form() {
             className={styles.input}
             name="email"
             type="email"
-            onChange={(e) => {
-              setEmail(e.target.value);
-            }}
+            onChange={(e) => setEmail(e.target.value)}
           />
           <textarea
             value={msg}
@@ -89,9 +95,7 @@ function Form() {
             className={styles.input}
             name="msg"
             rows="4"
-            onChange={(e) => {
-              setMsg(e.target.value);
-            }}
+            onChange={(e) => setMsg(e.target.value)}
           />
           <button type="submit" style={{ marginTop: "20px" }}>
             Get In Touch
