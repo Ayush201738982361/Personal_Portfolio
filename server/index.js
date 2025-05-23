@@ -5,12 +5,13 @@ const userRoutes = require("./routes/userRoutes");
 require("dotenv").config();
 const port = process.env.PORT;
 const url = process.env.MONGO_URL;
+const FRONT_END = process.env.FRONT_END;
 
 const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: `${FRONT_END}`,
   })
 );
 app.use("/", userRoutes);
