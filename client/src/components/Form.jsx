@@ -25,10 +25,11 @@ function Form() {
     e.preventDefault();
 
     try {
-      const res = await axios.post(
-        `http://localhost:${import.meta.env.VITE_BACKEND_PORT}/`,
-        { name, email, msg }
-      );
+      const res = await axios.post(`${import.meta.env.VITE_BACKEND_URL}`, {
+        name,
+        email,
+        msg,
+      });
 
       if (res.status === 201) {
         setName("");
