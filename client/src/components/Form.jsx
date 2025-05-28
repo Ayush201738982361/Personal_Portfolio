@@ -1,4 +1,4 @@
-import { TypingAnimation } from "@/components/magicui/typing-animation";
+import "../App.css";
 import { ToastContainer, toast } from "react-toastify";
 import { useState } from "react";
 import styles from "../form.module.css";
@@ -58,18 +58,7 @@ function Form() {
           marginBottom: "40px",
         }}
       >
-        <TypingAnimation
-          style={{
-            fontSize: "2rem",
-            color: "#F5EEDD",
-            fontFamily: "Retro New Version, sans-serif",
-            fontWeight: "400",
-            fontStyle: "italic",
-            textShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
-          }}
-        >
-          Contact Me
-        </TypingAnimation>
+        <h3 className="section-heading">Contact Me</h3>
       </div>
 
       <form method="POST" onSubmit={handleSubmit}>

@@ -2,7 +2,7 @@ import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
-import { TypingAnimation } from "@/components/magicui/typing-animation";
+import "../App.css";
 import { IoSchool } from "react-icons/io5";
 import { FaSchool } from "react-icons/fa6";
 import "react-vertical-timeline-component/style.min.css";
@@ -18,18 +18,7 @@ function EducationTimeline() {
           marginBottom: "40px",
         }}
       >
-        <TypingAnimation
-          style={{
-            fontSize: "2rem",
-            color: "#F5EEDD",
-            fontFamily: "Retro New Version, sans-serif",
-            fontWeight: "400",
-            fontStyle: "italic",
-            textShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
-          }}
-        >
-          Education
-        </TypingAnimation>
+        <h3 className="section-heading">Education</h3>
       </div>
       {/* Timelines */}
       {/* First Timeline */}

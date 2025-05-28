@@ -6,8 +6,6 @@ import { LiaBlogSolid } from "react-icons/lia";
 import { CgWebsite } from "react-icons/cg";
 import { IoBookSharp } from "react-icons/io5";
 
-import { TypingAnimation } from "@/components/magicui/typing-animation";
-
 import "react-vertical-timeline-component/style.min.css";
 
 const Projects = () => {
@@ -21,18 +19,7 @@ const Projects = () => {
           marginBottom: "40px",
         }}
       >
-        <TypingAnimation
-          style={{
-            fontSize: "2rem",
-            color: "#F5EEDD",
-            fontFamily: "Retro New Version, sans-serif",
-            fontWeight: "400",
-            fontStyle: "italic",
-            textShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
-          }}
-        >
-          Projects
-        </TypingAnimation>
+        <h3 className="section-heading">Projects</h3>
       </div>
 
       <VerticalTimeline>
