@@ -1,4 +1,3 @@
-import { TypingAnimation } from "@/components/magicui/typing-animation";
 import { Button } from "@/components/ui/button";
 import github from "../public/github.png";
 import linkedin from "../public/linkedin.png";
@@ -18,20 +17,7 @@ function Navbar({ toggleSection }) {
           className="navbar-brand me-auto"
           href="#"
           style={{ textDecoration: "none" }}
-        >
-          <TypingAnimation
-            style={{
-              fontSize: "2rem",
-              color: "#F5EEDD",
-              fontFamily: "Retro New Version, sans-serif",
-              fontWeight: "400",
-              fontStyle: "italic",
-              textShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
-            }}
-          >
-            Hi I'm Ayush
-          </TypingAnimation>
-        </a>
+        ></a>
         <ul className="navbar-nav ms-auto d-flex flex-row gap-3 align-items-center">
           <li className="nav-item">
             <a href="https://github.com/Ayush201738982361">
