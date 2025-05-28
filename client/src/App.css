@@ -2,45 +2,33 @@ body {
   background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
 }
 
-.about-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  max-width: 2000px;
-  margin: 0 auto;
-}
-
-.text-section {
-  font-family: "Retro New Version", sans-serif;
-  margin-left: 20px;
-  color: white;
-  font-size: 20px;
-  align-self: center;
-  text-align: justify;
-}
-
-.image-section {
+.hero-container {
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  padding: 20px;
+  color: #fff;
+  text-align: center;
 }
 
-.image-section img {
-  max-width: 100%;
-  height: auto;
+h1 {
+  font-size: 7rem;
+  margin-bottom: 15px;
 }
 
-@media (max-width: 768px) {
-  .about-container {
-    grid-template-columns: 1fr;
-  }
-  .text-section {
-    font-family: "roboto";
-    margin-left: 20px;
-    color: white;
-    font-size: 20px;
-    align-self: center;
-    text-align: justify;
-  }
+.profession {
+  font-size: 4rem;
+  color: #ff4d4d;
+}
+
+.section-heading {
+  font-size: 2.5rem;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 15px;
 }
 
 .skills-grid {
