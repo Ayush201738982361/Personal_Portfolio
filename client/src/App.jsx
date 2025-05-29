@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import AboutMe from "./components/AboutMe";
 import EducationTimeline from "./components/EducationTimeline";
-import Skills from "./components/Skills";
+import Skill from "./components/Skill";
 import Projects from "./components/Projects";
 import Form from "./components/Form";
 import "./App.css";
@@ -31,7 +31,7 @@ function App() {
                 <Navbar toggleSection={toggleSection} />
                 <AboutMe />
                 <EducationTimeline />
-                <Skills />
+                <Skill />
                 <Projects />
                 <div ref={formRef}>
                   <Form></Form>
