@@ -79,7 +79,7 @@ const Projects = () => {
           icon={<IoBookSharp />}
         >
           <h3 className="vertical-timeline-element-title">
-            BookER - Online Bookstore Platform
+            BookER - Online Bookstore Marketplace
           </h3>
           <h4 className="vertical-timeline-element-subtitle">
             MongoDB, Express.js, React.js, Node.js
