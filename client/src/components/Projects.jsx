@@ -2,9 +2,9 @@ import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
-import { LiaBlogSolid } from "react-icons/lia";
 import { CgWebsite } from "react-icons/cg";
 import { IoBookSharp } from "react-icons/io5";
+import { GrSecure } from "react-icons/gr";
 
 import "react-vertical-timeline-component/style.min.css";
 
@@ -23,29 +23,6 @@ const Projects = () => {
       </div>
 
       <VerticalTimeline>
-        {/* First Project */}
-        <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          contentStyle={{ background: "#FE5D26", color: "#fff" }}
-          contentArrowStyle={{ borderRight: "7px solid  #FE5D26" }}
-          date="September 2024"
-          iconStyle={{ background: "#FE5D26", color: "#fff" }}
-          icon={<LiaBlogSolid />}
-        >
-          <h3 className="vertical-timeline-element-title">Blogify</h3>
-          <h4 className="vertical-timeline-element-subtitle">
-            EJS, JavaScript, Node.js, Express.js, MongoDB
-          </h4>
-          <p>
-            Created a robust blog website called Blogify focused on learning
-            backend development. It enables users to create, edit, and view blog
-            posts with a clean, user-friendly interface. Implemented RESTful
-            APIs, secure backend logic using Node.js, efficient routing with
-            Express.js, and server-side rendering with EJS. Integrated JWT for
-            authentication and Crypto.js for password encryption.
-          </p>
-        </VerticalTimelineElement>
-
         {/* Second Project */}
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
@@ -93,6 +70,41 @@ const Projects = () => {
             object modeling. The platform also integrates NodeMailer for
             automated welcome emails, JWT for secure authentication, and RESTful
             APIs for smooth client-server communication.
+          </p>
+        </VerticalTimelineElement>
+        <VerticalTimelineElement
+          className="vertical-timeline-element--work"
+          contentStyle={{ background: "#FE5D26", color: "#fff" }}
+          contentArrowStyle={{ borderRight: "7px solid  #FE5D26" }}
+          date="June 2025"
+          iconStyle={{ background: "#FE5D26", color: "#fff" }}
+          icon={<GrSecure />}
+        >
+          <h3 className="vertical-timeline-element-title">Secure.ai</h3>
+          <h4 className="vertical-timeline-element-subtitle">
+            MongoDB,Express.js,React.js,Node.js,LLM
+          </h4>
+          <p>
+            Secure.AI is a full-stack web application designed to provide users
+            with intelligent cybersecurity assistance through a seamless and
+            secure interface. The platform is built using React.js for a dynamic
+            and responsive frontend experience, while the backend is powered by
+            Node.js and Express.js to deliver reliable API interactions and
+            modular functionality. MongoDB is employed as the primary database,
+            with Mongoose facilitating efficient object modeling and schema
+            enforcement. The application includes a secure login and signup
+            module backed by JWT (JSON Web Tokens) for authentication and
+            session management. One of its core features allows users to upload
+            zipped files, which are then unzipped and parsed through a Large
+            Language Model (LLM) to detect and suggest cybersecurity
+            improvements. Another key module is an AI-powered chatbot trained to
+            answer questions related to cybersecurity threats, best practices,
+            and regional laws and acts. Secure.AI also integrates NodeMailer to
+            send automated welcome emails and future security alerts. RESTful
+            APIs ensure smooth communication between client and server, while
+            the platform’s modular design includes comprehensive documentation
+            of cybersecurity acts and standard project features like dashboards
+            and user profiles.
           </p>
         </VerticalTimelineElement>
       </VerticalTimeline>
